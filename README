@@ -1,0 +1,44 @@
+== Welcome to easy_accordion
+
+easy_accordion is a plugin for jQuery that enables web developers to add simple 'more info' and 'less info' links and add accordion effects to hide and show info.
+
+
+== Getting Started
+
+1. Download easy_slider
+2. Add easy_slider and jQuery to your document
+3. Enjoy!
+
+== How to use
+
+To use easy slider just add a link and a div (or any other element you wish to slide) and set that element id to the anchor on your link like so:
+
+=== Markup
+  <div id="content">
+    <a class="easy_accordion" href="#my_hidden_info">more info</a>
+    <div id="my_hidden_info">
+      info to show/hide
+    <div>
+  </div>
+  
+=== JavaScript
+
+You only need to add easy_accordion to the selector of your choice
+
+  $(document).ready(function() {
+    $("content").easy_accordion();
+  });
+  
+== Customize
+
+Easy accordion support different options to customize your links:
+
+  plusText: 'more info' // text you want to display when choosing to display content
+  lessInfo: 'less info' // test you want to display when choosing to hide content
+  startHidden: true // Whether or not to start with all info hidden
+  
+In case you need to be specific about the element to affect easy_accordion supports a second parameter which is the selectr you want to affect
+
+  $("#wrapper").easy_accordion( { startHidde: false, lessText: "-", plusText: "+" }, "h4 span .accordion" )
+
+This will affect all links with a class accordion inside a span that is at the same time inside an h4 element. Check the example in the project.

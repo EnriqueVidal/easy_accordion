@@ -1,0 +1,46 @@
+<html>
+	<head>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+		<script type="text/javascript" src="../easy_accordion.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+			  // We only want to affect links with class accordion that are inside a span element
+				$("#wrapper").easy_accordion({ plusText: "+INFO", lessText: "-INFO" }, "span .accordion" );
+				// Default settings, easy accordion assumes everything
+				$("#footer").easy_accordion();
+			});
+		</script>
+		<title>Easy Accordion Example</title>
+	</head>
+	<body>
+  	
+  	<div id="wrapper">
+  		<h4>First Test</h4>
+  		<span><a class="accordion" href="#more-info">+INFO</a></span>
+  		<div id="more-info">
+  			Some hidden Text
+  		</div>
+		
+  		<h4>Second Test</h4>
+      <span><a class="accordion" href="#more-info2">+INFO</a></span>
+  		<div id="more-info2">
+  		   Second hidden test
+  		</div>
+  		
+  		<!--  Sin ce the link below is not withing a span element it will not be affected -->
+  		<h4>Third Test</h4>
+      <a class="accordion" href="#more-info3">+INFO</a>
+  		<div id="more-info3">
+  			This div does not get affected
+  		</div>
+  	</div>
+  	
+  	<div id="footer">
+  	  <h4>Contact info</h4>
+  	  <a class="easy_accordion" href="#more-info4">more info</a>
+  	  <div id="more-info4">
+  	    Contact me at user@email.com
+  	  </div>
+	  </div>
+	</body>
+</html>
